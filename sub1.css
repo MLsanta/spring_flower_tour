@@ -82,9 +82,11 @@
     footer {
         width: 110%;
         height: 200px;
-        /* margin-left: ; */
+
         background-color: #51342e;
+        position: relative;
     }
+
     canvas {
         position: fixed;
         width: 100%;
