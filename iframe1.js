@@ -61,5 +61,5 @@ window.addEventListener("mousemove", duringDrag);
 window.addEventListener("mouseup", stopDrag);
 
 sliderTrack.addEventListener("touchstart", startDrag);
-window.addEventListener("touchmove", duringDrag);
-window.addEventListener("touchend", stopDrag);
+sliderTrack.addEventListener("touchmove", duringDrag);
+sliderTrack.addEventListener("touchend", stopDrag);
