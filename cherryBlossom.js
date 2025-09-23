@@ -29,17 +29,16 @@ window.addEventListener("resize", () => {
     canvas.height = window.innerHeight;
 });
 
-// 벚꽃 잎 클래스
 class Petal {
     constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height * 2 - canvas.height;
-        this.w = 30 + Math.random() * 15;
-        this.h = 20 + Math.random() * 10;
-        this.opacity = this.w / 45;
+        this.w = 30 + Math.random() * 30;
+        this.h = 20 + Math.random() * 20;
+        this.opacity = this.w / 50;
         this.xSpeed = 2 + Math.random();
-        this.ySpeed = 1 + Math.random() * 0.5;
-        this.flip = Math.random();
+        this.ySpeed = 1 + Math.random() * 1;
+        this.flip = Math.random() * 0.4;
         this.flipSpeed = Math.random() * 0.03;
     }
 
