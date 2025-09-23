@@ -493,6 +493,12 @@ body {
         border-radius: 5px;
         margin-top: 5px;
     }
+    .container,
+    .slide {
+        touch-action: none;
+        user-select: none;
+        -webkit-user-drag: none;
+    }
 }
 @keyframes blink {
     0% {
