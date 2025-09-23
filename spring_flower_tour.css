@@ -275,7 +275,18 @@ body {
         left: -10%;
         background-color: #51342e;
     }
-
+    .copyright {
+        color: white;
+        position: absolute;
+        left: 20%;
+        top: 50px;
+    }
+    .copyright2 {
+        color: white;
+        position: absolute;
+        left: 20%;
+        top: 80px;
+    }
     canvas {
         position: fixed;
         top: 0;
@@ -389,9 +400,21 @@ body {
 
     .copyright {
         color: white;
-        font-size: 14px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 50px;
+        width: 480px;
         text-align: center;
-        width: 100%;
+        font-size: 10px;
+    }
+    .copyright2 {
+        color: white;
+        position: absolute;
+        top: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 10px;
     }
     .h3Box {
         position: absolute;
@@ -454,9 +477,9 @@ body {
 
     .featureBox {
         width: 90%;
-        height: auto; /* 최소 높이로 변경 */
-        min-height: 300px; /* 필요시 최소 높이 지정 */
-        margin: 20px auto; /* 중앙 정렬과 간격 */
+        height: auto;
+        min-height: 300px;
+        margin: 20px auto;
     }
 
     .feature1 {
