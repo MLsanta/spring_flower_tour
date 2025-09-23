@@ -328,7 +328,7 @@ body {
     }
     .cside {
         width: 100%;
-        height: 100vh;
+        height: 60vh;
     }
     .logoA {
         width: 30%;
@@ -453,7 +453,45 @@ body {
 
     .featureBox {
         width: 90%;
-        height: 100px;
+        height: auto; /* 최소 높이로 변경 */
+        min-height: 300px; /* 필요시 최소 높이 지정 */
+        margin: 20px auto; /* 중앙 정렬과 간격 */
+    }
+
+    .feature1 {
+        width: 100%;
+        height: 120px;
+        background-color: rgb(141, 141, 180);
+        transition: all 0.3s ease;
+        background-image: url(./brough_img/여의도\ 벚꽃축제\ 배너.jpg);
+        background-position: center;
+        background-size: cover;
+        border: #d699b5 2px solid;
+        border-radius: 5px;
+    }
+    .feature2 {
+        width: 100%;
+        height: 120px;
+        background-color: blue;
+        transition: all 0.3s ease;
+        background-image: url(./brough_img/단양\ 소백산\ 청쭉제.jpg);
+        background-size: cover;
+        background-position: center;
+        border: #d699b5 2px solid;
+        border-radius: 5px;
+        margin-top: 5px;
+    }
+    .feature3 {
+        width: 100%;
+        height: 120px;
+        background-color: rgb(87, 87, 104);
+        transition: all 0.3s ease;
+        background-image: url(brough_img/곡성_장미.jpg);
+        background-position: center;
+        background-size: cover;
+        border: #d699b5 2px solid;
+        border-radius: 5px;
+        margin-top: 5px;
     }
 }
 @keyframes blink {
