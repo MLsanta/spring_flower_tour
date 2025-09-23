@@ -37,6 +37,8 @@ function startDrag(e) {
 
 function duringDrag(e) {
     if (!isDragging) return;
+    e.preventDefault();
+
     const x = e.clientX || e.touches[0].clientX;
     const dx = x - startX;
     currentX = prevX + dx;
@@ -59,5 +61,5 @@ window.addEventListener("mousemove", duringDrag);
 window.addEventListener("mouseup", stopDrag);
 
 sliderTrack.addEventListener("touchstart", startDrag);
-window.addEventListener("touchmove", duringDrag);
-window.addEventListener("touchend", stopDrag);
+sliderTrack.addEventListener("touchmove", duringDrag);
+sliderTrack.addEventListener("touchend", stopDrag);
