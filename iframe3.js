@@ -27,11 +27,35 @@ sliderTrack.style.transform = `translateX(${currentX}px)`;
 let isDragging = false;
 let startX = 0;
 let prevX = 0;
+let autoScrollInterval;
+
+function startAutoScroll() {
+    stopAutoScroll();
+
+    autoScrollInterval = setInterval(() => {
+        if (!isDragging) {
+            currentX -= 1;
+            if (currentX < -2 * originalSlideSetWidth) {
+                currentX = -originalSlideSetWidth;
+            }
+            sliderTrack.style.transform = `translateX(${currentX}px)`;
+        }
+    }, 16);
+}
+
+function stopAutoScroll() {
+    clearInterval(autoScrollInterval);
+}
+
+function getX(e) {
+    return e.touches ? e.touches[0].clientX : e.clientX;
+}
 
 function startDrag(e) {
     isDragging = true;
-    startX = e.clientX || e.touches[0].clientX;
+    startX = getX(e);
     prevX = currentX;
+    stopAutoScroll();
     e.preventDefault();
 }
 
@@ -39,7 +63,7 @@ function duringDrag(e) {
     if (!isDragging) return;
     e.preventDefault();
 
-    const x = e.clientX || e.touches[0].clientX;
+    const x = getX(e);
     const dx = x - startX;
     currentX = prevX + dx;
 
@@ -54,12 +78,15 @@ function duringDrag(e) {
 
 function stopDrag() {
     isDragging = false;
+    startAutoScroll();
 }
 
 sliderTrack.addEventListener("mousedown", startDrag);
-window.addEventListener("mousemove", duringDrag);
-window.addEventListener("mouseup", stopDrag);
+sliderTrack.addEventListener("mousemove", duringDrag);
+sliderTrack.addEventListener("mouseup", stopDrag);
 
 sliderTrack.addEventListener("touchstart", startDrag);
 sliderTrack.addEventListener("touchmove", duringDrag);
 sliderTrack.addEventListener("touchend", stopDrag);
+
+startAutoScroll();
