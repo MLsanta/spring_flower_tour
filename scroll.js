@@ -3,12 +3,12 @@ let banner = document.querySelector(".banner");
 function startScroll() {
     let sy = window.scrollY;
     console.log("scrollY:", sy);
-    if (sy > 200) {
+    if (sy > 100) {
         texts.classList.add("active");
     } else {
         texts.classList.remove("active");
     }
-    if (sy > 240) {
+    if (sy > 440) {
         banner.classList.add("on");
     } else {
         banner.classList.remove("on");
