@@ -6,7 +6,7 @@ h4 {
     color: #51342e;
 }
 .outContainer {
-    width: 300px;
+    width: 100%;
     overflow: hidden;
     display: flex;
     position: relative;
