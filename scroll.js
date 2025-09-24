@@ -2,13 +2,13 @@ let texts = document.getElementById("texts");
 let banner = document.querySelector(".banner");
 function startScroll() {
     let sy = window.scrollY;
-
-    if (sy > 300) {
+    console.log("scrollY:", sy);
+    if (sy > 200) {
         texts.classList.add("active");
     } else {
         texts.classList.remove("active");
     }
-    if (sy > 500) {
+    if (sy > 240) {
         banner.classList.add("on");
     } else {
         banner.classList.remove("on");
