@@ -21,6 +21,12 @@
     .cside {
         width: 25%;
         height: 100%;
+        position: relative;
+    }
+    .main {
+        position: absolute;
+        right: 20%;
+        top: 50px;
     }
     #texts {
         text-align: center;
@@ -131,6 +137,7 @@
         width: 480px;
         text-align: center;
         font-size: 10px;
+        display: none;
     }
     .copyright2 {
         color: white;
@@ -139,6 +146,7 @@
         left: 50%;
         transform: translateX(-50%);
         font-size: 10px;
+        display: none;
     }
     canvas {
         position: fixed;
@@ -167,6 +175,11 @@
     }
     .off {
         opacity: 0;
+    }
+    .main {
+        position: absolute;
+        right: 55%;
+        bottom: -150%;
     }
 }
 #texts.active {
