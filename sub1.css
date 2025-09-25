@@ -16,7 +16,6 @@
     .bside {
         width: 50%;
         height: 100%;
-        padding-top: 10%;
         color: #51342e;
     }
     .cside {
@@ -64,6 +63,17 @@
         height: 100%;
         inset: 0;
         pointer-events: none;
+    }
+    .scrolls {
+        position: absolute;
+        left: 50%;
+        bottom: 30%;
+        transform: translateX(-6%);
+        opacity: 1;
+        transition: all 0.3s ease;
+    }
+    .off {
+        opacity: 0;
     }
 }
 @media (max-width: 480px) {
@@ -146,6 +156,17 @@
     }
     iframe {
         width: 100%;
+    }
+    .scrolls {
+        position: absolute;
+        left: 50%;
+        bottom: 0%;
+        transform: translateX(-6%);
+        opacity: 1;
+        transition: all 0.3s ease;
+    }
+    .off {
+        opacity: 0;
     }
 }
 #texts.active {
