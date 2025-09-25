@@ -168,7 +168,7 @@
     .scrolls {
         position: absolute;
         left: 50%;
-        bottom: 0%;
+        bottom: -10%;
         transform: translateX(-6%);
         opacity: 1;
         transition: all 0.3s ease;
